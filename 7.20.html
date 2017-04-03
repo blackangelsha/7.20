@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//构造函数
+		function MakePhone(name,color) {
+			this.type="iphone真机";
+			this.name=name;
+			this.color=color;
+			this.call=function(){
+				alert("请打电话给我")
+			}
+		}
+		var iphone6s=new MakePhone("iphone6s plus","土豪金");
+		alert(iphone6s.color);
+		alert(iphone6s.name);
+		alert(iphone6s.type);
+		iphone6s.type="模机";
+		alert(iphone6s.type);
+		iphone6s.call();
+		function MakeCar (argument) {
+			// body...
+		}
+
+
+
+
+
+		//json  原生声明
+		var obj={
+			name:"Perter",sex:"man",country:"China",age:"28"
+		};
+		document.write(obj.name+"<br>");
+		//Object方法
+		var obj1=new Object();
+			obj1={
+				name:"Wade",sex:"man",country:"USA",age:"34"
+			};
+			document.write(obj1.name+"<br>");
+		//MakeTV
+		function MakeTV (mysize,mycolor) {
+			mysize=mysize||55;				//声明初始值
+			mycolor=mycolor||"gold";		//声明初始值
+			this.type="Letv";
+			this.shape="square";
+			this.fbl="2k";
+			this.size=mysize;
+			this.color=mycolor;
+			this.move=function(){
+				alert("正在上映的电影是：绝地逃亡");
+			};
+		};
+		var TV1=new MakeTV(5,"black");
+		alert(TV1.size);
+		TV1.online=function (){
+			document.write("可以上网");
+		}
+		TV1.online();
+		TV1.fb1="4k";
+		alert(TV1.shape)
+		delete TV1.shape;//删除属性
+		alert(TV1,shape);
+		alert(TV1.constructor);//访问构造函数
+		TV1=null;//null 销毁对象
+		alert(TV1.shape);
+		var TV2=new MakeTV();
+		alert(TV2.fb1);
+	</script>
+</body>
+</html>
